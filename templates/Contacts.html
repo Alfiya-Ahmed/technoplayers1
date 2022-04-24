@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title %}Contacts{% endblock title %}
+
+{% block body %}
+<div class="container-fluid px-0">
+    <img src="/static/img/phone.jpg" class="d-block w-100 my-4" alt="...">
+</div>
+<form method="post" action="/Contacts">
+    {% csrf_token %}
+    <div class="form-floating mb-3">
+        <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name">
+        <label for="floatingInput">Name</label>
+    </div>
+    <div class="form-floating mb-3">
+        <input type="text" class="form-control" id="email" name="email" placeholder="Enter your email">
+        <label for="floatingInput">Email address</label>
+    </div>
+    <div class="form-floating mb-3">
+        <input type="text" class="form-control" id="phone"  name="phone" placeholder="Enter your name">
+        <label for="floatingInput">Phone Number</label>
+    </div>
+    <button type="submit" class="btn btn-primary my-4 py-10">Submit</button>
+
+</form>
+</div>
+{% endblock body %}
